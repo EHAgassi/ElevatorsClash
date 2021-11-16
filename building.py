@@ -1,5 +1,6 @@
-from Elevator import Elevator
 import json
+
+from Elevator import Elevator
 
 
 class building:
@@ -23,12 +24,12 @@ class building:
 
                 for e in my_elev["_elevators"]:
                     self.elevators.append(Elevator(e))
-                    print(e)
+                    # print(e)
         except IOError as e:
             print(e)
 
     def __str__(self) -> str:
-        return f"Building:Min&Max floor: {self.minFloor}'-'{self.maxFloor} and"
+        return f"Building: Min&Max floor: {self.minFloor}-{self.maxFloor};\n The elevators details: {self.elevators}"
 
     def __repr__(self) -> str:
-        return f"Building:Min&Max floor: {self.minFloor}'-'{self.maxFloor} and "
+        return f"Building: Min&Max floor: {self.minFloor}-{self.maxFloor} The elevators details: {self.elevators}"

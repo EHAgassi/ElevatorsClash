@@ -1,15 +1,16 @@
 import csv
-from call_object import call_object
+
 from building import building
-import Elevator
-import pandas
+from call_object import call_object
+
 
 def write_calls():
     data_call =[]
-        # 'matched_calls.csv'
+
     for c in calls:
         data_call.append(c.__dict__.values())
-    with open("filename", 'w', newline="") as file:
+    file_name = "output.csv"
+    with open(file_name, 'w', newline="") as file:
         csvwriter = csv.writer(file)
         csvwriter.writerows(data_call)
 
@@ -29,14 +30,7 @@ if __name__ == '__main__':
     b.read_json("B2.json")
     print(b)
 
-    #     here should matching the elev
+    #     here should matching the elev algorithm
 
-    # new_calllist = []
-    # for row in calls:
-    #     new_calllist.append(row.__dict__.values())
 
     write_calls()
-    # filename = 'matched_calls.csv'
-    # with open(filename, 'w', newline="") as file:
-    #     csvwriter = csv.writer(file)
-    #     csvwriter.writerows(calls.__dict__)

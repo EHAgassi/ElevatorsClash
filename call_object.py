@@ -16,5 +16,5 @@ class call_object:
         return f"Time: {self.time}, Src floor:{self.src}, Destination floor: {self.dest}, Allocated Elevator: {self.alloc}"
 
 
-def __repr__(self) -> str:
-    return f"Time: {self.time}, Src floor:{self.src}, Destination floor: {self.dest}, Allocated Elevator: {self.alloc}"
+    def __repr__(self) -> str:
+        return f"Time: {self.time}, Src floor:{self.src}, Destination floor: {self.dest}, Allocated Elevator: {self.alloc}"

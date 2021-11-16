@@ -1,6 +1,5 @@
 #  def offlineAlgorithm (Building , Calls, output):
 # # def offlineAlgorithm < Building.json > < Calls.csv > < output.csv >
-import json
 
 
 class Elevator:
@@ -14,12 +13,10 @@ class Elevator:
         self.startTime = dict["_startTime"]
         self.stopTime = dict["_stopTime"]
 
-    # for key, value in my_elev._elevators():
-    #     self = elevator(**value)
-    #     elevs[e.id] = e
+
 
     def __str__(self) -> str:
-        return f"Elevator id is{self.id}\nspeed: {self.speed}\n Min&Max floor: {self.minFloor}'-'{self.maxFloor}"
+        return f"\n\tElevator id is: {self.id} speed: {self.speed} Min-Max floor: {self.minFloor}-{self.maxFloor}"
 
     def __repr__(self) -> str:
-        return f"Elevator id is{self.id}\nspeed: {self.speed}\n Min&Max floor: {self.minFloor}'-'{self.maxFloor}"
+        return f"\n\tElevator id is: {self.id} speed: {self.speed} Min-Max floor: {self.minFloor}-{self.maxFloor}"
